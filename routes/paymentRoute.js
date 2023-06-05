@@ -1,9 +1,9 @@
 const express = require('express')
-const createPayment = require('../controllers/paymentController/createPayment')
-const showPayments = require('../controllers/paymentController/showPayments')
+const createPaymentController = require('../controllers/paymentController/createPaymentController')
+const showPaymentsController = require('../controllers/paymentController/showPaymentsController')
 const paymentRoute = express.Router()
 
-paymentRoute.post("/create", createPayment)
-paymentRoute.get("/show", showPayments)
+paymentRoute.post("/create", createPaymentController)
+paymentRoute.get("/show", showPaymentsController)
 
 module.exports = paymentRoute

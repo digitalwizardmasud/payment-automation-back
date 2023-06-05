@@ -1,6 +1,6 @@
 const PaymentModel = require("../../models/paymentModel")
 
-const createPayment = (req, res) => {
+const createPaymentController = (req, res) => {
     const {email, amount, paymentId} = req.body
     if(!email || !amount || !paymentId){
         res.status(400).send({status:'UnSuccessful', msg: 'Invalid Data'})
@@ -17,4 +17,4 @@ const createPayment = (req, res) => {
         })
     }
 }
-module.exports = createPayment
+module.exports = createPaymentController

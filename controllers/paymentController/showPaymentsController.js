@@ -1,6 +1,6 @@
 const PaymentModel = require("../../models/paymentModel");
 
-const showPayments = (req, res) => {
+const showPaymentsController = (req, res) => {
   const { email } = req.query;
   if (!email) {
     res.status(400).send({ status: "UnSuccessful", msg: "Invalid Data" });
@@ -14,4 +14,4 @@ const showPayments = (req, res) => {
       });
   }
 };
-module.exports = showPayments;
+module.exports = showPaymentsController
